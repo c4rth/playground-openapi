@@ -18,7 +18,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/userlist.yaml#/components/schemas/UserList'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/UserList'
     post:
       summary: Create a new user
       operationId: createUser
