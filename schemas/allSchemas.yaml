@@ -1,0 +1,57 @@
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: float
+        inStock:
+          type: boolean
+      required:
+        - id
+        - name
+        - price
+        - inStock
+
+    ProductList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Product'
+
+    Order:
+      type: object
+      properties:
+        orderId:
+          type: string
+        productId:
+          type: string
+        quantity:
+          type: integer
+          minimum: 1
+        total:
+          type: number
+          format: float
+      required:
+        - orderId
+        - productId
+        - quantity
+        - total
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+      required:
+        - code
+        - message
