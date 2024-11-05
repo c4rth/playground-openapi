@@ -18,7 +18,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/ProductList'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/ProductList'
 
   /products/{productId}:
     get:
@@ -36,13 +36,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/Product'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/Product'
         '404':
           description: Product not found
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/Error'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/Error'
 
   /orders:
     post:
@@ -52,17 +52,17 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/Order'
+              $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/Order'
       responses:
         '201':
           description: Order created
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/Order'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/Order'
         '400':
           description: Invalid order data
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/allSchemas.yaml#/components/schemas/Error'
+                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/ecommerce-schemas.yaml#/components/schemas/Error'

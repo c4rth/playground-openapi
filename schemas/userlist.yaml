@@ -1,4 +1,0 @@
-UserList:
-  type: array
-  items:
-    $ref: 'https://example.com/schemas/user.yaml#/User'
