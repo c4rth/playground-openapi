@@ -3,9 +3,11 @@ info:
   title: Example API
   version: 1.0.0
   description: An API example using remote references for schema definitions located at URLs.
+  contact:
+    name: daffy.duck@acme.com
 
 servers:
-  - url: https://api.example-{environment}.com/v1
+  - url: https://api.example-{environment}.com/v1    
 
 paths:
   /users:
