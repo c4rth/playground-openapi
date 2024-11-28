@@ -5,7 +5,7 @@ info:
   description: An API example using remote references for schema definitions located at URLs.
 
 servers:
-  - url: https://api.example.com/v1
+  - url: https://api.example-{environment}.com/v1
 
 paths:
   /users:
@@ -18,7 +18,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/UserList'
+                $ref: '../../schemas/user-schemas.yaml#/components/schemas/UserList'
     post:
       summary: Create a new user
       operationId: createUser
@@ -26,14 +26,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/User'
+              $ref: '../../schemas/user-schemas.yaml#/components/schemas/User'
       responses:
         '201':
           description: User created successfully
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/User'
+                $ref: '../../schemas/user-schemas.yaml#/components/schemas/User'
 
   /users/{userId}:
     get:
@@ -51,13 +51,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/User'
+                $ref: '../../schemas/user-schemas.yaml#/components/schemas/User'
         '404':
           description: User not found
           content:
             application/json:
               schema:
-                $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/Error'
+                $ref: '../../schemas/user-schemas.yaml#/components/schemas/Error'
 
 components:
   responses:
@@ -66,4 +66,4 @@ components:
       content:
         application/json:
           schema:
-            $ref: 'https://raw.githubusercontent.com/c4rth/playground-openapi/refs/heads/main/schemas/user-schemas.yaml#/components/schemas/Error'
+            $ref: '../../schemas/user-schemas.yaml#/components/schemas/Error'

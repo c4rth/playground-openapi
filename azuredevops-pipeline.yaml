@@ -1,0 +1,68 @@
+# Pipeline to build, test, and package an Angular SPA
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: UseNode@1
+  inputs:
+    version: '12.x'
+  displayName: 'Install Node.js'
+
+- task: Npm@1
+  displayName: 'Install Angular CLI'
+  inputs:
+    command: 'custom'
+    customCommand: 'install -g @angular/cli'
+
+- task: Npm@1
+  displayName: 'Install Dependencies'
+  inputs:
+    command: 'install'
+
+- task: Bash@3
+  displayName: 'Angular Test and Build'
+  inputs:
+    targetType: 'inline'
+    script: |
+      ng test --no-watch --no-progress --browsers ChromeHeadless --code-coverage
+      ng build --prod
+
+- task: reportgenerator@4
+  displayName: 'Generate Code Coverage Report'
+  inputs:
+    reports: 'coverage\iRED-Web-Portal\cobertura-coverage.xml'
+    targetdir: 'coverage\iRED-Web-Portal\Reports'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '$(Build.SourcesDirectory)/reports/junit.xml'
+    searchFolder: 
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish Code Coverage'
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(Build.SourcesDirectory)\coverage\iRED-Web-Portal\cobertura-coverage.xml'
+    reportDirectory: '$(Build.SourcesDirectory)\coverage\iRED-Web-Portal\Reports'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive Artifacts'
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)/dist/iRED-Web-Portal'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
