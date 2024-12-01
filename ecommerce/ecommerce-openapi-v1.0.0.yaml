@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: E-commerce API
+  title: E-commerce API 2
   version: 1.0.0
   description: API for an e-commerce platform.
   contact:
