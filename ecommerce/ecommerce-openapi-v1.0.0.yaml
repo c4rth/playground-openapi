@@ -27,7 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/ProductList'
+                $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/ProductList'
   
   /products/{productId}:
     get:
@@ -48,13 +48,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/Product'
+                $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/Product'
         '404':
           description: Product not found
           content:
             application/json:
               schema:
-                $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/Error'
+                $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/Error'
 
   /orders:
     post:
@@ -67,17 +67,17 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/Order'
+              $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/Order'
       responses:
         '201':
           description: Order created
           content:
             application/json:
               schema:
-                $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/Order'
+                $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/Order'
         '400':
           description: Invalid order data
           content:
             application/json:
               schema:
-                $ref: '../../schemas/ecommerce-schemas.yaml#/components/schemas/Error'
+                $ref: '../schemas/ecommerce-schemas.yaml#/components/schemas/Error'
