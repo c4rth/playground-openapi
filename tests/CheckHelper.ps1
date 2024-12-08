@@ -3,6 +3,9 @@ function Get-GitTagList {
     Write-Host "##[command]Get Git tag list"
     $gitTagList = @()
     $tags = git tag --list
+    if (-not $tags) {
+        $tags = "migration"
+    }
     $gitTagList += $tags
     $temp = ConvertTo-Json $gitTagList
     Write-Host "##[command]$($temp)"
@@ -14,14 +17,14 @@ function Get-ApiFilesToTreat($GitTagList) {
     Write-Host "##[command]Get API files to publish or to check"
     $apiFilesToPublish = @()
     $apiFilesToCheck = @()
-    $allApiFiles = Get-ChildItem -Path "." -Exclude @("domains", "devops") | Get-ChildItem -Recurse -File -Depth 255 -Filter "*.yaml"
+    $allApiFiles = Get-ChildItem -Path "." -Exclude @("domains", "devops") | Get-ChildItem -Recurse -File -Depth 255 -Include "*.yaml"
     foreach ($file in $allApiFiles) {
         if ($GitTagList.Contains($file.BaseName)) {
-            Write-Host "##[command]API tag '$($file.BaseName)' found -> to check"
+            Write-Host "##[command]    API tag '$($file.BaseName)' found -> to check"
             $apiFilesToCheck += $file
         }
         else {
-            Write-Host "##[command]API tag '$($file.BaseName)' not found -> to publish"
+            Write-Host "##[command]    API tag '$($file.BaseName)' not found -> to publish"
             $apiFilesToPublish += $file
         }
     }
@@ -44,16 +47,16 @@ function Get-DomainFilesToPublish($GitTagList) {
                 $isModified = $res.length -gt 0
             }
             if ($isModified) {
-                Write-Host "##[command]Domain '$($domain.BaseName)' modified or tag not found -> to publish"
+                Write-Host "##[command]    Domain '$($domain.BaseName)' modified or tag not found -> to publish"
                 $domainFilesToPublish += $domain
             }
             else {
-                Write-Host "##[command]Domain '$($domain.BaseName)' not modified -> skipped"
+                Write-Host "##[command]    Domain '$($domain.BaseName)' not modified -> skipped"
             }
         }
     }
     else {
-        Write-Host "##[command]No Domain files"
+        Write-Host "##[command]    No Domain files in repository"
     }
     return $domainFilesToPublish
 }
@@ -69,20 +72,20 @@ function Get-ApiFilesUsingDomainFiles($ApiFilesToPublish, $ApiFilesToCheck, $Dom
         foreach ($domain in $DomainFilesToCheck) {
             if ($content -match "\`$ref: '?\.\./domains/$($domain.BaseName).yaml#") {
                 if ($updatedFilesToPublish.Contains($file)) {
-                    Write-Host "##[command]$($file.BaseName) contains ref to $($domain.BaseName) but already to publish -> skipped"
+                    Write-Host "##[command]    $($file.BaseName) contains ref to $($domain.BaseName) but already to publish -> skipped"
                 }
                 else {
                     $updatedFilesToPublish += $file
-                    Write-Host "##[command]$($file.BaseName) contains ref to $($domain.BaseName) -> to publish"
+                    Write-Host "##[command]    $($file.BaseName) contains ref to $($domain.BaseName) -> to publish"
                 }
             }
             else {
                 if ($updatedFilesToCheck.Contains($file)) {
-                    Write-Host "##[command]$($file.BaseName) doesn't contain ref to $($domain.BaseName) but already to check -> skipped"
+                    Write-Host "##[command]    $($file.BaseName) doesn't contain ref to $($domain.BaseName) but already to check -> skipped"
                 }
                 else {
                     $updatedFilesToCheck += $file
-                    Write-Host "##[command]$($file.BaseName) doesn't contain ref to $($domain.BaseName) -> to check"
+                    Write-Host "##[command]    $($file.BaseName) doesn't contain ref to $($domain.BaseName) -> to check"
                 }
             }
         }
@@ -95,7 +98,7 @@ function Get-ApiFilesUsingDomainFiles($ApiFilesToPublish, $ApiFilesToCheck, $Dom
 
 # Get apis to publish, to check and domains tpopublish
 function Get-ComponentsFromGitTags($GitTagList) {
-    Write-Host "##[command]Get APIs and Domains using git tags"
+    Write-Host "##[command]Get APIs and Domains using Git tags"
 
     # Files to publish or to check
     $result = Get-ApiFilesToTreat -GitTagList $GitTagList
@@ -125,13 +128,13 @@ function Get-ComponentsFromApiFileName ($ApiFileName) {
         exit 1
     }
     $apiPath = if ($ApiFileName.StartsWith("/")) { ".$($ApiFileName)" } else { "./$($ApiFileName)" }
-    Write-Host "##[command]Check if exists: $($apiPath)"
+    Write-Host "##[command]    Check if exists: $($apiPath)"
     if (Test-Path -Path $apiPath -PathType Leaf) {
         $file = Get-ChildItem -Path $apiPath
         $apiFilesToPublish += $file
     }
     else {
-        Write-Host "##[warning]File not found '$($ApiFileName)'"
+        Write-Host "##[warning]    File not found '$($ApiFileName)'"
     }
     return @{
         ApiFilesToPublish    = $apiFilesToPublish
@@ -146,18 +149,18 @@ function Get-ModifiedApiFiles($GitTagList, $ApiFileToCheck) {
     Write-Host "##[command]Check if API files are modified ($($ApiFileToCheck.Length))"
     $apiFilesModified = @()
     foreach ($file in $ApiFileToCheck) {
-        Write-Host "##[command]Check if '$($file.BaseName)' is modified"
+        Write-Host "##[command]    Check if '$($file.BaseName)' is modified"
         $isModified = $True
         if ($GitTagList.Contains($file.BaseName)) {
             $res = git diff --exit-code --name-only $file.BaseName -- $file.FullName
             $isModified = $res.length -gt 0
         }
         if ($isModified) {
-            Write-Host "##[command]File modified: $($file.BaseName)"
+            Write-Host "##[command]    File modified: $($file.BaseName)"
             $apiFilesModified += $file
         }
         else {
-            Write-Host "##[command]File NOT modified: $($file.BaseName) -> SKIPPED"
+            Write-Host "##[command]    File NOT modified: $($file.BaseName) -> SKIPPED"
         }
     }
     return $apiFilesModified

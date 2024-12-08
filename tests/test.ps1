@@ -50,16 +50,7 @@ if ($apisToPublish.Length -gt 0) {
     foreach ($file in $apisToPublish) {
         Write-Host "##[command]Add API tag '$($file.BaseName)'"
         $res = git tag --force $file.BaseName
-        Write-Host "##[command]$($res)"
-        Write-Host "##[command]Push API tag '$($file.BaseName)'"
-#        $res = git push --force origin $file.BaseName
-#        Write-Host "##[command]$($res)"
-#        Write-Host "Push tag" $res
     }
-    Write-Host "##[command]Push API tags"
-    $res = git push --tag
-    Write-Host "##[command]$($res)"
-    Write-Host "Push tags" $res
 }
 else {
     Write-Host "##[command]No API to publish."
@@ -70,14 +61,14 @@ if ($domainsToPublish.Length -gt 0) {
     foreach ($file in $domainsToPublish) {
         Write-Host "##[command]Add Domain tag '$($file.BaseName)'"
         $res = git tag --force $file.BaseName
-        Write-Host "##[command]$($res)"
     }
-    Write-Host "##[command]Push Domain tags"
-    $res = git push --tag
-    Write-Host "##[command]$($res)"
-    Write-Host "Push tags" $res
 }
 else {
     Write-Host "##[command]No Domain to publish."
 }
 
+if ($apiFilesToPublish.Length -gt 0 -or $domainsToPublish.Length -gt 0) {
+    Write-Host "##[command]Push tags"
+    $res = git push --tag
+    Write-Host "##[command]$($res)"
+}

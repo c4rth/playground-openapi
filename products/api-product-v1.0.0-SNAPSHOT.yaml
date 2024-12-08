@@ -2,7 +2,9 @@ openapi: 3.0.1
 info:
   title: Example API
   version: 1.0.0
-  description: An API example using remote references for schema definitions located at URLs.
+  description: |
+    An API example using remote references for schema definitions located at URLs.
+    Modified
   contact:
     name: daffy.duck@acme.com
 
