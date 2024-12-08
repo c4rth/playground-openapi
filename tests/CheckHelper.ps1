@@ -202,3 +202,15 @@ function ConvertTo-DomainsToPublish($FileList) {
     }
     return $domainsToPublish
 }
+
+# Add or move Git Tag 
+function Invoke-GitTag($FileList) {
+    foreach ($file in $FileList) {
+        Write-Host "##[command]Add tag '$($file.BaseName)'"
+        if ($gitTagList.Contains($file.BaseName)) {
+            $res = git tag --delete $file.BaseName
+            $res = git push origin :refs/tags/$($file.BaseName)
+        }
+        $res = git tag --force $file.BaseName
+    }
+}

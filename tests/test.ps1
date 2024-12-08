@@ -47,10 +47,7 @@ Write-Host "##vso[task.setvariable variable=API_PLATFORM_MIGRATION;isOutput=true
 # Log
 if ($apisToPublish.Length -gt 0) {
     Write-Host "##[command]API to publish : $($apisToPublishJson)"
-    foreach ($file in $apisToPublish) {
-        Write-Host "##[command]Add API tag '$($file.BaseName)'"
-        $res = git tag --force $file.BaseName
-    }
+    Invoke-GitTag -FileList $apisToPublish
 }
 else {
     Write-Host "##[command]No API to publish."
@@ -58,17 +55,14 @@ else {
 
 if ($domainsToPublish.Length -gt 0) {
     Write-Host "##[command]Domain to publish : $($domainsToPublishJson)"
-    foreach ($file in $domainsToPublish) {
-        Write-Host "##[command]Add Domain tag '$($file.BaseName)'"
-        $res = git tag --force $file.BaseName
-    }
+    Invoke-GitTag -FileList $domainsToPublish
 }
 else {
     Write-Host "##[command]No Domain to publish."
 }
 
 if ($apiFilesToPublish.Length -gt 0 -or $domainsToPublish.Length -gt 0) {
-    Write-Host "##[command]Push tags"
+    Write-Host "##[command]Push All tags"
     $res = git push origin --tag
     Write-Host "##[command]$($res)"
 }
