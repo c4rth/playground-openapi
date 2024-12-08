@@ -69,6 +69,6 @@ else {
 
 if ($apiFilesToPublish.Length -gt 0 -or $domainsToPublish.Length -gt 0) {
     Write-Host "##[command]Push tags"
-    $res = git push --tag
+    $res = git push origin --tag
     Write-Host "##[command]$($res)"
 }
