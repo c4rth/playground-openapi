@@ -20,7 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../schemas/product-schemas.yaml#/ProductList'
+                $ref: '../domains/product-schemas.yaml#/ProductList'
     post:
       summary: Create a new user
       operationId: createUser
@@ -28,14 +28,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '../schemas/product-schemas.yaml#/Product'
+              $ref: '../domains/product-schemas.yaml#/Product'
       responses:
         '201':
           description: User created successfully
           content:
             application/json:
               schema:
-                $ref: '../schemas/product-schemas.yaml#/Product'
+                $ref: '../domains/product-schemas.yaml#/Product'
 
   /users/{userId}:
     get:
@@ -53,13 +53,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../schemas/product-schemas.yaml#/Product'
+                $ref: '../domains/product-schemas.yaml#/Product'
         '404':
           description: User not found
           content:
             application/json:
               schema:
-                $ref: '../schemas/product-schemas.yaml#/Error'
+                $ref: '../domains/product-schemas.yaml#/Error'
 
 components:
   responses:
@@ -68,4 +68,4 @@ components:
       content:
         application/json:
           schema:
-            $ref: '../schemas/product-schemas.yaml#/Error'
+            $ref: '../domains/product-schemas.yaml#/Error'

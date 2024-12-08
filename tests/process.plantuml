@@ -1,0 +1,46 @@
+@startuml
+
+start
+
+partition "Check" {
+    :Check APIs and Domains to publish;
+}
+
+if (Migration ?) then (yes)
+    partition "Validate" {
+        :Run Spectral;
+        :Generate Reports;
+    }
+endif
+
+partition "Resolve" {
+    if (Migration ?) then (yes)
+        :Resolve with SwaggerHub;
+    else (no)
+        :Resolve with Swagger-Parser;
+    endif
+    :Publish Pipeline Artifacts;
+}
+
+fork
+    partition "Deploy" {
+        :Download Pipeline Artifacts;
+        :Maven Deploy to Azure Artifacts;
+    }
+    :Tag Repository;
+fork again
+    partition "AppRegistry" {
+        :Download Pipeline Artifacts;
+        :Register in AppRegistry;
+    }
+fork again
+    partition "Backstage" {
+        :Download Pipeline Artifacts;
+        :Generate catalog-info;
+        :Register in Backstage;
+    }
+end fork
+
+stop
+
+@enduml
