@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: |
     An API example using remote references for schema definitions located at URLs.
-    Modified 2
+    Modified 3
   contact:
     name: daffy.duck@acme.com
 
