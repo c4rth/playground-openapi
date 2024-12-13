@@ -11,7 +11,7 @@ metadata:
   api-project: wxyz
 spec:
   type: openapi
-  lifecycle: experimental
+  lifecycle: snapshot
   owner: team-c
   definition:
     $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.1-SNAPSHOT.yaml
