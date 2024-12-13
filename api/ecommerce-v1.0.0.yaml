@@ -14,4 +14,4 @@ spec:
   lifecycle: experimental
   owner: team-c
   definition:
-    $text: ../ecommerce/ecommerce-openapi-v1.0.0.yaml
+    $text: https://github.com/c4rth/playground-openapi/blob/main/ecommerce/ecommerce-openapi-v1.0.0.yaml

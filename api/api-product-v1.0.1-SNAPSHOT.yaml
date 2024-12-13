@@ -14,4 +14,4 @@ spec:
   lifecycle: experimental
   owner: team-c
   definition:
-    $text: ../products/api-product-v1.0.1-SNAPSHOT.yaml
+    $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.1-SNAPSHOT.yaml
