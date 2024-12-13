@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: api-product-v1.0.0
-  description: Product API
+  description: Product API with a long description because why not, if it is possible
   tags:
     - store
     - rest
