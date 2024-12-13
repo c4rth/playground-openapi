@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: example-apis
-  description: A collection of all Backstage example APIs
+  name: sample-apis
+  description: A collection of all some APIs
 spec:
   targets:
     - ./api-product-v1.0.0.yaml
