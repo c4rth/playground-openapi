@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-product-v1.0.3
+  description: Product API
+  tags:
+    - store
+    - rest
+  api-name: api-product
+  api-version: v1.0.3
+  api-project: wxyz
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-c
+  definition:
+    $text: ../products/api-product-v1.0.3.yaml

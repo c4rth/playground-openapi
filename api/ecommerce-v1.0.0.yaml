@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ecommerce-v1.0.0
+  description: Ecommerce API
+  tags:
+    - store
+    - rest
+  api-name: ecommerce
+  api-version: v1.0.0
+  api-project: abcd
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: team-c
+  definition:
+    $text: ../ecommerce/ecommerce-openapi-v1.0.0.yaml
