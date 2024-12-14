@@ -16,6 +16,10 @@ spec:
     - ./api-product-v1.0.8.yaml
     - ./api-product-v1.0.9.yaml
     - ./api-product-v1.0.10.yaml
-    - ./api-product-v1.1.0-SNAPSHOT.yaml
+    - ./api-product-v1.1.0-snapshot.yaml
     - ./ecommerce-v1.0.0.yaml
     - ./ecommerce-v1.0.1-snapshot.yaml
+    - ./ecommerce-v1.0.2.yaml
+    - ./ecommerce-v1.0.3.yaml
+    - ./ecommerce-v1.0.4.yaml
+    - ./ecommerce-v1.0.5-snapshot.yaml
