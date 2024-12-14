@@ -1,17 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: api-product-v1.0.1-SNAPSHOT
+  name: api-product-v1.0.8
   description: Product API
   tags:
     - store
     - rest
   api-name: api-product
-  api-version: 1.0.1
+  api-version: 1.0.8
   api-project: wxyz
 spec:
   type: openapi
-  lifecycle: snapshot
+  lifecycle: release
   owner: team-c
   definition:
-    $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.1-SNAPSHOT.yaml
+    $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.8.yaml

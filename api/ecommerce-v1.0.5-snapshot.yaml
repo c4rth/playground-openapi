@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ecommerce-v1.0.5-snapshot
+  description: Ecommerce API
+  tags:
+    - store
+    - rest
+  api-name: ecommerce
+  api-version: 1.0.5-snapshot
+  api-project: abcd
+spec:
+  type: openapi
+  lifecycle: snapshot
+  owner: team-c
+  definition:
+    $text: https://github.com/c4rth/playground-openapi/blob/main/ecommerce/ecommerce-openapi-v1.0.5-snapshot.yaml

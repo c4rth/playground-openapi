@@ -1,0 +1,84 @@
+openapi: 3.0.1
+info:
+  title: E-commerce API 2
+  version: 1.0.2
+  description: |
+    API for an e-commerce platform.
+    Modified
+  contact:
+    name: X Y
+servers:
+  - url: https://api.ecommerce.com/v1
+
+tags:
+ - name: Get
+ - name: Post
+
+paths:
+  /products:
+    get:
+      summary: Get a list of products
+      operationId: getProducts
+      description: "xxx"
+      tags:
+       - Get
+      responses:
+        '200':
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/product-schemas.yaml#/ProductList'
+  
+  /products/{productId}:
+    get:
+      summary: Get product details
+      description: GET description
+      operationId: getProduct
+      tags:
+        - Get
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Product'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Error'
+
+  /orders:
+    post:
+      summary: Create a new order
+      description: POST description
+      operationId: createOrder
+      tags:
+        - Post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '../domains/ecommerce-schemas.yaml#/Order'
+      responses:
+        '201':
+          description: Order created
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Order'
+        '400':
+          description: Invalid order data
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Error'

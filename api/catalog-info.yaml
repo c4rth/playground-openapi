@@ -2,12 +2,20 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: sample-apis
-  description: A collection of all some APIs
+  description: A collection of some APIs
 spec:
   targets:
     - ./api-product-v1.0.0.yaml
     - ./api-product-v1.0.1-SNAPSHOT.yaml
     - ./api-product-v1.0.2.yaml
     - ./api-product-v1.0.3.yaml
+    - ./api-product-v1.0.4.yaml
+    - ./api-product-v1.0.5.yaml
+    - ./api-product-v1.0.6.yaml
+    - ./api-product-v1.0.7-SNAPSHOT.yaml
+    - ./api-product-v1.0.8.yaml
+    - ./api-product-v1.0.9.yaml
+    - ./api-product-v1.0.10.yaml
+    - ./api-product-v1.1.0-SNAPSHOT.yaml
     - ./ecommerce-v1.0.0.yaml
     - ./ecommerce-v1.0.1-snapshot.yaml
