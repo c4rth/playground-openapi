@@ -12,7 +12,7 @@ spec:
     - ./api-product-v1.0.4.yaml
     - ./api-product-v1.0.5.yaml
     - ./api-product-v1.0.6.yaml
-    - ./api-product-v1.0.7-SNAPSHOT.yaml
+    - ./api-product-v1.0.7-snapshot.yaml
     - ./api-product-v1.0.8.yaml
     - ./api-product-v1.0.9.yaml
     - ./api-product-v1.0.10.yaml
