@@ -7,7 +7,7 @@ metadata:
     - store
     - rest
   api-name: api-product
-  api-version: 1.0.1
+  api-version: 1.0.1-SNAPSHOT
   api-project: wxyz
 spec:
   type: openapi

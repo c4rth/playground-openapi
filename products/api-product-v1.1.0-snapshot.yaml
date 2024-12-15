@@ -3,14 +3,18 @@ info:
   title: Example API
   version: 1.1.0
   description: |
-    An API example using remote references for schema definitions located at URLs.
-    Modified 3
-    An API example using remote references for schema definitions located at URLs.
-    Modified 3
-    An API example using remote references for schema definitions located at URLs.
-    Modified 3
-    An API example using remote references for schema definitions located at URLs.
-    Modified 3
+    # Description
+    -  An API example using remote references for schema definitions located at URLs.
+      - Modified 1
+    -  An API example using remote references for schema definitions located at URLs.
+      - Modified 2
+    -  An API example using remote references for schema definitions located at URLs.
+      - Modified 3
+    -  An API example using remote references for schema definitions located at URLs.
+      - Modified 4
+    -  An API example using remote references for schema definitions located at URLs.
+      - Modified 5
+    ## EndOfDescription
   contact:
     name: daffy.duck@acme.com
 
