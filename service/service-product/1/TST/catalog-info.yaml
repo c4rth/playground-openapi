@@ -10,7 +10,7 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: backstage-team-a.O
+  owner: team-a.c
   system: system-c
   providesApis:
   - ecommerce-v1.0.4

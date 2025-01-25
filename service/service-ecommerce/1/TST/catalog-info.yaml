@@ -10,7 +10,7 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: backstage-team-a.O
+  owner: team-a.c
   system: system-c
   providesApis:
   - api-product-v1.1.0
