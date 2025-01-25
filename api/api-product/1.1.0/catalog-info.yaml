@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: api-product-v1.1.0-snapshot
+  name: api-product-v1.1.0
   description: Product API
   tags:
     - store
