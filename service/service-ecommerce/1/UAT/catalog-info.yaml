@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: service-ecommerce-v1-UAT
+  description: service-ecommerce:20241101.2
+  service-name: service-ecommerce
+  service-version: '1'
+  container-name: service-ecommerce-container
+  container-version: '20241101.2'
+spec:
+  type: service
+  lifecycle: UAT
+  owner: team-c
+  system: system-c
+  providesApis:
+  - api-product-v1.0.9
+  consumesApis:
+  - ecommerce-v1.0.0
+  - ecommerce-v1.0.1

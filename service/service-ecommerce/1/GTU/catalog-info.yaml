@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: service-ecommerce-v1-TST
+  description: service-ecommerce:20241206.2
+  service-name: service-ecommerce
+  service-version: '1'
+  container-name: service-ecommerce-container
+  container-version: '20241206.2'
+spec:
+  type: service
+  lifecycle: GTU
+  owner: team-c
+  system: system-c
+  providesApis:
+  - api-product-v1.0.10
+  consumesApis:
+  - ecommerce-v1.0.2
+  - ecommerce-v1.0.3

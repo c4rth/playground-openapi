@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: service-product-v1-TST
+  description: service-product:20250120.2
+  service-name: service-product
+  service-version: '1'
+  container-name: service-product-container
+  container-version: '20250120.2'
+spec:
+  type: service
+  lifecycle: TST
+  owner: team-c
+  system: system-c
+  providesApis:
+  - ecommerce-v1.0.4
+  - ecommerce-v1.0.5
