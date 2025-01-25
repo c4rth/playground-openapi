@@ -10,7 +10,7 @@ metadata:
 spec:
   type: service
   lifecycle: GTU
-  owner: team-c
+  owner: backstage-team-a.O
   system: system-c
   providesApis:
   - ecommerce-v1.0.2
