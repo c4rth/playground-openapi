@@ -5,21 +5,23 @@ info:
   description: |
     # Description
     -  An API example using remote references for schema definitions located at URLs.
-      - Modified 1
+       - Modified 1
     -  An API example using remote references for schema definitions located at URLs.
-      - Modified 2
+       - Modified 2
     -  An API example using remote references for schema definitions located at URLs.
-      - Modified 3
+       - Modified 3
     -  An API example using remote references for schema definitions located at URLs.
-      - Modified 4
+       - Modified 4
     -  An API example using remote references for schema definitions located at URLs.
-      - Modified 5
+       - Modified 5
     ## EndOfDescription
   contact:
     name: daffy.duck@acme.com
+    email: daffy.duck@acme.com
+    url: https://acme.com
 
 servers:
-  - url: https://api.example-{environment}.com/v1    
+  - url: https://api.example-tst.com/v1
 
 paths:
   /users:

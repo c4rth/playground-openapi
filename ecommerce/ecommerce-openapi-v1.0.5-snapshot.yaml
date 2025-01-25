@@ -3,16 +3,20 @@ info:
   title: E-commerce API 2
   version: 1.0.5
   description: |
-    API for an e-commerce platform.
-    Modified
+    API for an e-commerce platform. API for an e-commerce platform. API for an e-commerce platform.
+    API for an e-commerce platform. API for an e-commerce platform. API for an e-commerce platform.
   contact:
     name: X Y
+    email: x.y@be.be
+    url: https://x.y.be
 servers:
   - url: https://api.ecommerce.com/v1
 
 tags:
  - name: Get
+   description: GET
  - name: Post
+   description: POST
 
 paths:
   /products:
@@ -29,6 +33,13 @@ paths:
             application/json:
               schema:
                 $ref: '../domains/product-schemas.yaml#/ProductList'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Error'
+  
   
   /products/{productId}:
     get:
@@ -50,6 +61,12 @@ paths:
             application/json:
               schema:
                 $ref: '../domains/ecommerce-schemas.yaml#/Product'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Error'
         '404':
           description: Product not found
           content:
@@ -78,6 +95,12 @@ paths:
                 $ref: '../domains/ecommerce-schemas.yaml#/Order'
         '400':
           description: Invalid order data
+          content:
+            application/json:
+              schema:
+                $ref: '../domains/ecommerce-schemas.yaml#/Error'
+        '401':
+          description: Unauthorized
           content:
             application/json:
               schema:

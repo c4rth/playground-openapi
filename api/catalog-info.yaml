@@ -5,21 +5,21 @@ metadata:
   description: A collection of some APIs
 spec:
   targets:
-    - ./api-product-v1.0.0.yaml
-    - ./api-product-v1.0.1-SNAPSHOT.yaml
-    - ./api-product-v1.0.2.yaml
-    - ./api-product-v1.0.3.yaml
-    - ./api-product-v1.0.4.yaml
-    - ./api-product-v1.0.5.yaml
-    - ./api-product-v1.0.6.yaml
-    - ./api-product-v1.0.7-snapshot.yaml
-    - ./api-product-v1.0.8.yaml
-    - ./api-product-v1.0.9.yaml
-    - ./api-product-v1.0.10.yaml
-    - ./api-product-v1.1.0-snapshot.yaml
-    - ./ecommerce-v1.0.0.yaml
-    - ./ecommerce-v1.0.1-snapshot.yaml
-    - ./ecommerce-v1.0.2.yaml
-    - ./ecommerce-v1.0.3.yaml
-    - ./ecommerce-v1.0.4.yaml
-    - ./ecommerce-v1.0.5-snapshot.yaml
+    - ./api-product/1.0.0/catalog-info.yaml
+    - ./api-product/1.0.1/catalog-info.yaml
+    - ./api-product/1.0.2/catalog-info.yaml
+    - ./api-product/1.0.3/catalog-info.yaml
+    - ./api-product/1.0.4/catalog-info.yaml
+    - ./api-product/1.0.5/catalog-info.yaml
+    - ./api-product/1.0.6/catalog-info.yaml
+    - ./api-product/1.0.7/catalog-info.yaml
+    - ./api-product/1.0.8/catalog-info.yaml
+    - ./api-product/1.0.9/catalog-info.yaml
+    - ./api-product/1.0.10/catalog-info.yaml
+    - ./api-product/1.1.0/catalog-info.yaml
+    - ./ecommerce/1.0.0/catalog-info.yaml
+    - ./ecommerce/1.0.1/catalog-info.yaml
+    - ./ecommerce/1.0.2/catalog-info.yaml
+    - ./ecommerce/1.0.3/catalog-info.yaml
+    - ./ecommerce/1.0.4/catalog-info.yaml
+    - ./ecommerce/1.0.5/catalog-info.yaml

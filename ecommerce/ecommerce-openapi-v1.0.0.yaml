@@ -28,7 +28,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../domains/product-schemas.yaml#/ProductList'
+                $ref: '../domains/product-schemas.yaml#/ProductListX'
   
   /products/{productId}:
     get:
