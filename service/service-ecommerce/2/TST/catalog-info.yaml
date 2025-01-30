@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: service-ecommerce-v1-tst
+  name: service-ecommerce-v2-tst
   description: service-ecommerce:20250120.2
   service-name: service-ecommerce
-  service-version: '1'
+  service-version: '2'
   container-name: service-ecommerce-container
   container-version: '20250120.2'
 spec:

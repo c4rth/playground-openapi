@@ -1,17 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: service-product-v2-gtu
-  description: service-product:20241206.2
+  name: service-product-v2-uat
+  description: service-product:20241101.2
   service-name: service-product
   service-version: '2'
   container-name: service-product-container
-  container-version: '20241206.2'
+  container-version: '20241101.2'
 spec:
   type: service
-  lifecycle: GTU
+  lifecycle: UAT
   owner: team-a.c
   system: system-c
   providesApis:
-  - ecommerce-v1.0.2
-  - ecommerce-v1.0.3
+  - ecommerce-v1.0.0
+  - ecommerce-v1.0.1

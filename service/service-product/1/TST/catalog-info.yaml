@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: service-product-v1-TST
+  name: service-product-v1-tst
   description: service-product:20250120.2
   service-name: service-product
   service-version: '1'
