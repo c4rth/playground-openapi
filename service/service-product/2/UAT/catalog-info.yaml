@@ -6,7 +6,7 @@ metadata:
   service-name: service-product
   service-version: '2'
   container-name: service-product-container
-  container-version: '20241101.2'
+  container-version: 'uat2-20241101.2'
 spec:
   type: service
   lifecycle: UAT

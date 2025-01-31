@@ -6,7 +6,7 @@ metadata:
   service-name: service-ecommerce
   service-version: '2'
   container-name: service-ecommerce-container
-  container-version: '20241206.2'
+  container-version: 'gtu2-20241206.2'
 spec:
   type: service
   lifecycle: GTU
