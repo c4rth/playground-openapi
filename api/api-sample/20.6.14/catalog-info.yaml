@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-sample-v20.6.14
+  description: Sample API version 20.6.14
+  api-name: api-sample
+  api-version: 20.6.14
+  api-project: wxyz
+spec:
+  type: openapi
+  lifecycle: release
+  owner: team-a.c
+  system: system-c
+  definition:
+    $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.0.yaml
