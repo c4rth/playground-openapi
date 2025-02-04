@@ -7,6 +7,8 @@ metadata:
   service-version: '2'
   container-name: service-product-container
   container-version: 'gtu2-20241206.2'
+  annotations:
+    dev.azure.com/project-repo: java-playground/java-playground
 spec:
   type: service
   lifecycle: GTU

@@ -7,6 +7,8 @@ metadata:
   service-version: '2'
   container-name: service-ecommerce-container
   container-version: 'tst2-20250120.2'
+  annotations:
+    dev.azure.com/project-repo: java-playground/java-playground
 spec:
   type: service
   lifecycle: TST

@@ -7,6 +7,8 @@ metadata:
   service-version: '1'
   container-name: service-ecommerce-container
   container-version: 'uat1-20241101.2'
+  annotations:
+    dev.azure.com/project-repo: java-playground/java-playground
 spec:
   type: service
   lifecycle: UAT
