@@ -9,6 +9,7 @@ metadata:
   container-version: 'gtu2-20241206.2'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
+    sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce
 spec:
   type: service
   lifecycle: GTU
