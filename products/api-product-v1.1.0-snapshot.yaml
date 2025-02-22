@@ -25,6 +25,7 @@ servers:
 
 paths:
   /users:
+    x-custom-info: Here's some custom information
     get:
       summary: Get list of users
       operationId: getUsers
@@ -52,6 +53,7 @@ paths:
                 $ref: '../domains/product-schemas.yaml#/Product'
 
   /users/{userId}:
+    x-custom-info: Here's some custom information
     get:
       summary: Get user by ID
       operationId: getUserById
