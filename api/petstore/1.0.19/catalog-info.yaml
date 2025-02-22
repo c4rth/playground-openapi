@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-petstore-v1.0.19
+  description: Petstore API
+  api-name: api-petstore
+  api-version: 1.0.19
+  api-project: wxyz
+spec:
+  type: openapi
+  lifecycle: release
+  owner: team-a.c
+  system: system-c
+  definition:
+    $text: https://github.com/c4rth/playground-openapi/blob/main/api/petstore/1.0.19/petstore-v1.0.19.yaml
