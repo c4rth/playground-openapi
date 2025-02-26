@@ -5,8 +5,7 @@ metadata:
   description: service-product:20241206.2
   service-name: service-product
   service-version: '1'
-  container-name: service-product-container
-  container-version: 'gtu1-20241206.2'
+  image-version: 'gtu1-20241206.2'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-product

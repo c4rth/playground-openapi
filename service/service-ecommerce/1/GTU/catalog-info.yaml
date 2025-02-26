@@ -5,8 +5,7 @@ metadata:
   description: service-ecommerce:20241206.2
   service-name: service-ecommerce
   service-version: '1'
-  container-name: service-ecommerce-container
-  container-version: 'gtu1-20241206.2'
+  image-version: 'gtu1-20241206.2'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce
