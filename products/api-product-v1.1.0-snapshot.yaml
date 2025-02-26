@@ -28,6 +28,7 @@ paths:
     get:
       summary: Get list of users
       operationId: getUsers
+      x-custom-info: Here's some custom information GET
       responses:
         '200':
           description: A list of users
@@ -38,6 +39,7 @@ paths:
     post:
       summary: Create a new user
       operationId: createUser
+      x-custom-info: Here's some custom information POST
       requestBody:
         content:
           application/json:
@@ -55,6 +57,7 @@ paths:
     get:
       summary: Get user by ID
       operationId: getUserById
+      x-custom-info: Here's some custom information GET
       parameters:
         - name: userId
           in: path
