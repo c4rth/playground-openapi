@@ -8,6 +8,8 @@ metadata:
   image-version: '20250222.1'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
+    kiali.io/namespace: istio-system
+    kiali.io/provider: default
 spec:
   type: service
   lifecycle: TST
