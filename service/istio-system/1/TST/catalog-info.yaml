@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: istio-system
+  description: Namespace istio-system.
+  tags:
+    - istio
+    - kiali
+    - core
+    - servicemesh
+  annotations:
+    kiali.io/provider: default
+    kiali.io/namespace: istio-system
+spec:
+  type: service
+  lifecycle: production
+  owner: user:guest
