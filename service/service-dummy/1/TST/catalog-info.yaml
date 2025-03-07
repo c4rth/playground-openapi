@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: service-dummy-v1-tst
   description: service-dummy:20250222.1
-  service:
+  x-service:
     name: service-dummy
     version: '1'
     platform: onprem
