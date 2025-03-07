@@ -3,14 +3,17 @@ kind: Component
 metadata:
   name: service-dummy-v1-tst
   description: service-dummy:20250222.1
+  service:
+    name: service-dummy
+    version: '1'
+    platform: onprem
+    image: '20250222.1'
   service-name: service-dummy
   service-version: '1'
   service-platform: 'onprem'
   image-version: '20250222.1'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
-    kiali.io/namespace: default
-    kiali.io/provider: default
 spec:
   type: service
   lifecycle: TST
