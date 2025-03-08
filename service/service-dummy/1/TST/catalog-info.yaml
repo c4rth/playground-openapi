@@ -17,7 +17,7 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: team-a.c
+  owner: team-b
   system: system-c
   providesApis:
   - api-petstore-v1.0.19
