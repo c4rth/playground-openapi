@@ -6,9 +6,7 @@ metadata:
   service-name: service-ecommerce
   service-version: '1'
   image-version: 'tst1-20250120.2'
-  service-platforms:
-    - 'onprem'
-    - 'azure'
+  service-platform: 'onprem'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce
