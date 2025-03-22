@@ -10,8 +10,7 @@ metadata:
     image: '20250222.1'
   service-name: service-dummy
   service-version: '1'
-  service-platforms:
-    - 'onprem'
+  service-platform: 'onprem,azure'
   image-version: '20250222.1'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
