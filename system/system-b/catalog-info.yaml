@@ -1,1 +1,7 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: system-b
+  description: System Team B
+spec:
+  owner: team-a.c
