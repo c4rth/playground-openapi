@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: sample-systems
+  description: A collection of some systems
+spec:
+  targets:
+    - ./system-a/catalog-info.yaml
+    - ./system-b/catalog-info.yaml
+    - ./system-c/catalog-info.yaml
