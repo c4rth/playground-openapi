@@ -5,6 +5,8 @@ metadata:
   name: run-pipeline-example
   title: Run Azure Pipeline Example - 5
 spec:
+  owner: user:guest
+  type: service
   parameters:
     - title: Choose a location
       required:
@@ -31,6 +33,13 @@ spec:
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
+    - id: debugLog
+      name: Debug 
+      action: debug:log
+      input:
+        message: |
+          repoUrl=${{ (parameters.repoUrl }}
+    
     - id: runAzurePipeline
       name: Run Pipeline
       action: azure:pipeline:run
