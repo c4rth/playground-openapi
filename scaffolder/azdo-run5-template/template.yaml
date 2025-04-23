@@ -26,6 +26,10 @@ spec:
             - java-playground
             allowedRepos:
             - java-playground
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+              additionalScopes:
+                azure: []
         pipelineId:
           title: Pipeline Id
           type: string
@@ -38,7 +42,11 @@ spec:
       action: debug:log
       input:
         message: |
-          repoUrl=${{ parameters.repoUrl }}
+          organization: ${{ (parameters.repoUrl | parseRepoUrl)['organization'] }}
+          pipelineId: ${{ parameters.pipelineId }}
+          project: ${{ (parameters.repoUrl | parseRepoUrl)['project'] }}
+          token: ${{ secrets.USER_OAUTH_TOKEN }}
+          
     
     - id: runAzurePipeline
       name: Run Pipeline
@@ -47,6 +55,7 @@ spec:
         organization: ${{ (parameters.repoUrl | parseRepoUrl)['organization'] }}
         pipelineId: ${{ parameters.pipelineId }}
         project: ${{ (parameters.repoUrl | parseRepoUrl)['project'] }}
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
 
   output:
     links:
