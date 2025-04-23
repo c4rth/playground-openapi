@@ -38,7 +38,7 @@ spec:
       action: debug:log
       input:
         message: |
-          repoUrl=${{ (parameters.repoUrl }}
+          repoUrl=${{ parameters.repoUrl }}
     
     - id: runAzurePipeline
       name: Run Pipeline
