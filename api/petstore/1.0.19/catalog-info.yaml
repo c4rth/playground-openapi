@@ -5,7 +5,7 @@ metadata:
   description: Petstore API
   api-name: api-petstore
   api-version: 1.0.19
-  api-project: system-c
+  api-project: system-a
 spec:
   type: openapi
   lifecycle: release
