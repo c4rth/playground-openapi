@@ -8,3 +8,4 @@ spec:
     - ./system-a/catalog-info.yaml
     - ./system-b/catalog-info.yaml
     - ./system-c/catalog-info.yaml
+    - ./system-d/catalog-info.yaml
