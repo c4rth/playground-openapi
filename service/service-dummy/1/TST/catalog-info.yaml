@@ -21,6 +21,8 @@ spec:
   system: system-c
   providesApis:
   - api-petstore-v1.0.19
+  - api:local/dummy-provided.yaml
   consumesApis:
   - api-backstage-v1.0.0
   - ecommerce-v1.0.5
+  - api:local/dummy-consumed.yaml
