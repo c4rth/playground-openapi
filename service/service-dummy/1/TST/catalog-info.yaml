@@ -25,3 +25,4 @@ spec:
   consumesApis:
   - api-backstage-v1.0.0
   - local:dummy-consumed-local.yaml
+  - ecommerce-v1.0.5
