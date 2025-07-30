@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: service-dummy-v1-gtu
+  description: service-dummy:20250311.1
+  service-name: service-dummy
+  service-version: '1'
+  service-platform: 'onprem,cloud'
+  image-version: '20250311.1'
+  annotations:
+    dev.azure.com/project-repo: java-playground/java-playground
+spec:
+  type: service
+  lifecycle: GTU
+  owner: team-b
+  system: system-c
+  providesApis:
+  - api:local/dummy-provided.yaml
+  consumesApis:
+  - api:local/dummy-consumed.yaml
