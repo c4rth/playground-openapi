@@ -16,4 +16,7 @@ spec:
     - ./service-product/2/GTU/catalog-info.yaml
     - ./service-product/2/UAT/catalog-info.yaml
     - ./service-dummy/1/TST/catalog-info.yaml
+    - ./service-dummy/1/GTU/catalog-info.yaml
+    - ./service-dummy-b/1/TST/catalog-info.yaml
+    - ./service-dummy-b/1/GTU/catalog-info.yaml
     - ./istio-system/1/TST/catalog-info.yaml
