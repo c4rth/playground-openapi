@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: teamb-service-dummy-v1-tst
+  name: teama-service-dummy-v1-tst
   description: service-dummy:20250222.1
   x-service:
     name: service-dummy
@@ -17,8 +17,8 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: team-b
-  system: system-c
+  owner: team-a
+  system: system-a
   providesApis:
   - api-petstore-v1.0.19
   - api:local/dummy-provided.yaml

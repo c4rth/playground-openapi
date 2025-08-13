@@ -1,27 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: teamb-service-dummy-v1-tst
-  description: service-dummy:20250222.1
-  x-service:
-    name: service-dummy
-    version: '1'
-    platform: onprem
-    image: '20250222.1'
+  name: teama-service-dummy-v1-gtu
+  description: service-dummy:20250311.1
   service-name: service-dummy
   service-version: '1'
   service-platform: 'onprem,cloud'
-  image-version: '20250222.1'
+  image-version: '20250311.1'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
 spec:
   type: service
-  lifecycle: TST
-  owner: team-b
-  system: system-c
+  lifecycle: GTU
+  owner: team-a
+  system: system-a
   providesApis:
-  - api-petstore-v1.0.19
   - api:local/dummy-provided.yaml
   consumesApis:
-  - api-backstage-v1.0.0
   - api:local/dummy-consumed.yaml

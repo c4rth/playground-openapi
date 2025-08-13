@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: service-ecommerce-v2-tst
+  name: teama-service-ecommerce-v2-tst
   description: service-ecommerce:20250120.2
   service-name: service-ecommerce
   service-version: '2'

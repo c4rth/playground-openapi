@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: service-product-v1-gtu
+  name: teama-service-product-v1-gtu
   description: service-product:20241206.2
   service-name: service-product
   service-version: '1'
