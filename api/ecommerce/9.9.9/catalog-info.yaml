@@ -1,18 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: ecommerce-v9.9.9
+  name: teama-ecommerce-v9.9.9
   description: Ecommerce API
   tags:
     - store
     - rest
   api-name: ecommerce
   api-version: 9.9.9
-  api-project: abcd
+  api-project: teama
 spec:
   type: openapi
   lifecycle: release
   owner: team-a.c
-  system: system-c
+  system: system-a
   definition:
     $text: https://github.com/c4rth/playground-openapi/blob/main/ecommerce/ecommerce-openapi-v1.0.0.yaml

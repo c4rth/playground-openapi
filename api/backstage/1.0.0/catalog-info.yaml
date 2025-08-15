@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: api-backstage-v1.0.0
+  name: teama-api-backstage-v1.0.0
   description: Backstage API
   api-name: api-backstage
   api-version: 1.0.0
-  api-project: wxyz
+  api-project: teama
 spec:
   type: openapi
   lifecycle: release
   owner: team-a.c
-  system: system-c
+  system: system-a
   definition:
     $text: https://github.com/c4rth/playground-openapi/blob/main/api/backstage/1.0.0/backstage-openapi.yaml

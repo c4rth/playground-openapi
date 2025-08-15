@@ -1,18 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: api-product-v1.0.9
+  name: teamb-api-product-v1.0.9
   description: Product API
   tags:
     - store
     - rest
   api-name: api-product
   api-version: 1.0.9
-  api-project: wxyz
+  api-project: teamb
 spec:
   type: openapi
   lifecycle: release
-  owner: team-a.c
-  system: system-c
+  owner: team-b
+  system: system-b
   definition:
     $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.9.yaml

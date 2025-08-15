@@ -25,3 +25,6 @@ spec:
     - ./ecommerce/1.0.5/catalog-info.yaml
     - ./backstage/1.0.0/catalog-info.yaml
     - ./petstore/1.0.19/catalog-info.yaml
+    - ./petstore/1.0.20/catalog-info.yaml
+    - ./petstore-b/1.0.19/catalog-info.yaml
+    - ./petstore-b/1.0.20/catalog-info.yaml

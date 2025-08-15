@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: teama-api-petstore-v1.0.20
+  name: teamb-api-petstore-v1.0.20
   description: Petstore API
   api-name: api-petstore
   api-version: 1.0.20
-  api-project: system-a
+  api-project: system-b
 spec:
   type: openapi
   lifecycle: release
-  owner: team-a.c
-  system: system-a
+  owner: team-b.c
+  system: system-b
   definition:
     $text: ./petstore-v1.0.20.yaml
