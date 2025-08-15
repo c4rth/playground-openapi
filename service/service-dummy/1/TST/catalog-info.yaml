@@ -20,8 +20,8 @@ spec:
   owner: team-b
   system: system-c
   providesApis:
-  - api-petstore-v1.0.19
+  - teama-api-petstore-v1.0.19
   - api:local/dummy-provided.yaml
   consumesApis:
-  - api-backstage-v1.0.0
+  - teama-api-backstage-v1.0.0
   - api:local/dummy-consumed.yaml

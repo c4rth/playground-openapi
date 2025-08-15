@@ -15,7 +15,7 @@ spec:
   owner: team-a.c
   system: system-c
   providesApis:
-  - api-product-v1.1.0
+  - teamb-api-product-v1.1.0
   consumesApis:
-  - ecommerce-v1.0.4
-  - ecommerce-v1.0.5
+  - teama-ecommerce-v1.0.4
+  - teama-ecommerce-v1.0.5
