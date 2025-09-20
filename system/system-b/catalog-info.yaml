@@ -4,4 +4,4 @@ metadata:
   name: system-b
   description: System B Team C
 spec:
-  owner: team-a.c
+  owner: group:default/team-a.O

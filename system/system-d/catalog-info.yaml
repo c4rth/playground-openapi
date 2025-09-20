@@ -4,4 +4,4 @@ metadata:
   name: system-d
   description: System Team D
 spec:
-  owner: team-b
+  owner: group:default/team-b

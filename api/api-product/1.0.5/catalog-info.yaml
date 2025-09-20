@@ -12,7 +12,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: release
-  owner: team-b
+  owner: group:default/team-b
   system: system-b
   definition:
     $text: https://github.com/c4rth/playground-openapi/blob/main/products/api-product-v1.0.5.yaml

@@ -12,7 +12,7 @@ metadata:
 spec:
   type: service
   lifecycle: UAT
-  owner: team-a.c
+  owner: group:default/team-a.O
   system: system-c
   providesApis:
   - teamb-api-product-v1.0.9

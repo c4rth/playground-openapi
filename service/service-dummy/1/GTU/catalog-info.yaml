@@ -12,7 +12,7 @@ metadata:
 spec:
   type: service
   lifecycle: GTU
-  owner: team-b
+  owner: group:default/team-b
   system: system-c
   providesApis:
   - api:local/dummy-provided.yaml
