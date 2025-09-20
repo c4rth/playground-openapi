@@ -9,7 +9,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: release
-  owner: group:default/team-a.O
+  owner: group:default/team-a.o
   system: system-a
   definition:
     $text: ./petstore-v1.0.20.yaml

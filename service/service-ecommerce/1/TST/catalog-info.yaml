@@ -13,7 +13,7 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: group:default/team-a.O
+  owner: group:default/team-a.o
   system: system-c
   providesApis:
   - teamb-api-product-v1.1.0

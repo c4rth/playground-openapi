@@ -4,4 +4,4 @@ metadata:
   name: system-a
   description: System A Team C
 spec:
-  owner: group:default/team-a.O
+  owner: group:default/team-a.o

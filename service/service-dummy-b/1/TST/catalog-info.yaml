@@ -17,7 +17,7 @@ metadata:
 spec:
   type: service
   lifecycle: TST
-  owner: group:default/team-a.O
+  owner: group:default/team-a.o
   system: system-a
   providesApis:
   - teama-api-petstore-v1.0.19

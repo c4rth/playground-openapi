@@ -13,7 +13,7 @@ metadata:
 spec:
   type: service
   lifecycle: UAT
-  owner: group:default/team-a.O
+  owner: group:default/team-a.o
   system: system-c
   providesApis:
   - teama-ecommerce-v1.0.0
