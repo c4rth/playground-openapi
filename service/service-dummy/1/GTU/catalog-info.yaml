@@ -7,6 +7,7 @@ metadata:
   service-version: '1'
   service-platform: 'onprem,cloud'
   image-version: '20250311.1'
+  devx-version: 'v4.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
 spec:

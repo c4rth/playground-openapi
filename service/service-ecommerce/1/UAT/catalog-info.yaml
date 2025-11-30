@@ -6,6 +6,7 @@ metadata:
   service-name: service-ecommerce
   service-version: '1'
   image-version: 'uat1-20241101.2'
+  devx-version: 'v4.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce

@@ -7,6 +7,7 @@ metadata:
   service-version: '2'
   image-version: 'uat2-20241101.2'
   service-platform: 'onprem'
+  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-product

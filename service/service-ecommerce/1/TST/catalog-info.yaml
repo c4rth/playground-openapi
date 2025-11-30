@@ -7,6 +7,7 @@ metadata:
   service-version: '1'
   image-version: 'tst1-20250120.2'
   service-platform: 'onprem'
+  devx-version: 'v6.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce

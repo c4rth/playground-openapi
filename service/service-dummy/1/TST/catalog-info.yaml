@@ -3,15 +3,11 @@ kind: Component
 metadata:
   name: teamb-service-dummy-v1-tst
   description: service-dummy:20250222.1
-  x-service:
-    name: service-dummy
-    version: '1'
-    platform: onprem
-    image: '20250222.1'
   service-name: service-dummy
   service-version: '1'
   service-platform: 'onprem,cloud'
   image-version: '20250222.1'
+  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
 spec:
