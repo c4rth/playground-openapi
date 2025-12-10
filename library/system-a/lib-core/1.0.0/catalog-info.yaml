@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lib-core-v1.0.0
+  description: lib-core version 1.0.0.
+  annotations:
+    dev.azure.com/project-repo: java-playground/java-playground
+spec:
+  type: library
+  lifecycle: production
+  owner: group:default/team-a.o
+  system: system-a

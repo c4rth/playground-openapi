@@ -20,3 +20,6 @@ spec:
   consumesApis:
   - teama-ecommerce-v1.0.0
   - teama-ecommerce-v1.0.1
+  dependsOn:
+  - component:lib-core-v1.0.0
+  - component:pipeline-v2

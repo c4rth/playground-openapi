@@ -19,3 +19,6 @@ spec:
   - api:local/dummy-provided.yaml
   consumesApis:
   - api:local/dummy-consumed.yaml
+  dependsOn:
+  - component:lib-core-v1.0.0
+  - component:pipeline-v2

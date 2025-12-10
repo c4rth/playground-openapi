@@ -21,3 +21,6 @@ spec:
   consumesApis:
   - teama-api-backstage-v1.0.0
   - api:local/dummy-consumed.yaml
+  dependsOn:
+  - component:lib-core-v2.0.0
+  - component:pipeline-v3
