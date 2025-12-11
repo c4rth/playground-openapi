@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: sample-libraries
+  description: A collection of some libraries
+spec:
+  targets:
+    - ./lib-core/1.0.0/catalog-info.yaml
+    - ./lib-core/2.0.0/catalog-info.yaml
+    - ./pipelines/2/catalog-info.yaml
+    - ./pipelines/3/catalog-info.yaml
+    

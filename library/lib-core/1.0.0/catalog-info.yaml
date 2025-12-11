@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: lib-core-v1.0.0
   description: lib-core version 1.0.0.
+  library-name: lib-core
+  library-version: '1.0.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
 spec:

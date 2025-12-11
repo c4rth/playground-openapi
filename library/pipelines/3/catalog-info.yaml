@@ -1,8 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: pipeline-v2
-  description: pipeline version 2
+  name: pipeline-v3
+  description: pipeline version 3
+  library-name: pipeline
+  library-version: '3'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
 spec:
