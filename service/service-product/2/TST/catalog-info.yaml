@@ -17,4 +17,7 @@ spec:
   system: system-c
   providesApis:
   - teama-ecommerce-v1.0.4
-  - teama-ecommerce-v1.0.5
+  - teama-ecommerce-v1.0.5  
+  dependsOn:
+  - component:lib-core-v9.0.0
+  - component:pipeline-v9
