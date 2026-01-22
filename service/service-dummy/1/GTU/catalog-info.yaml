@@ -22,3 +22,4 @@ spec:
   dependsOn:
   - component:lib-core-v1.0.0
   - component:pipeline-v2
+  - component:cicd-pipeline-templates-vfeature/custom-pipeline-version-to-test
