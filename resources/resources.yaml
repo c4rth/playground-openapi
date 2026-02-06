@@ -2,6 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: kind-platform-cluster
+  annotations:
+    backstage.io/kubernetes-id: platform-cluster
 spec:
   type: kubernetes-cluster
   owner: group:default/team-a.o
@@ -11,6 +13,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: kind-worker-cluster
+  annotations:
+    backstage.io/kubernetes-id: worker-cluster
 spec:
   type: kubernetes-cluster
   owner: group:default/team-a.o
