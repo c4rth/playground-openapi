@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kind-platform-cluster
+spec:
+  type: kubernetes-cluster
+  owner: group:default/team-a.o
+  system: system-c
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kind-worker-cluster
+spec:
+  type: kubernetes-cluster
+  owner: group:default/team-a.o
+  system: system-c
