@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: teama-ecommerce-v1.0.0-P045
-  description: Ecommerce API
+  name: teama-OperationSomethingFun-v1.0.0-P045
+  description: OperationSomethingFun
   tags:
     - store
     - rest
-  api-name: ecommerce
+  api-name: OperationSomethingFun
   api-version: 1.0.0-P045
   api-project: teama
   api-type: mca
