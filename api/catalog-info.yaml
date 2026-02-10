@@ -28,3 +28,4 @@ spec:
     - ./petstore/1.0.20/catalog-info.yaml
     - ./petstore-b/1.0.21/catalog-info.yaml
     - ./petstore-b/1.0.22/catalog-info.yaml
+    - ./OperationSomethingFun/1.0.0-P045/catalog-info.yaml
