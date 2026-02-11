@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: teama-OperationTableComputation-v1.0.0-P032
+  description: OperationTableComputation
+  tags:
+    - store
+    - rest
+  api-name: OperationTableComputation
+  api-version: 1.0.0-P032
+  api-project: teama
+  api-type: mca
+spec:
+  type: openapi
+  lifecycle: release
+  owner: group:default/team-a.o
+  system: system-a
+  definition:
+    $text: https://github.com/c4rth/playground-openapi/blob/main/ecommerce/ecommerce-openapi-v1.0.0.yaml
