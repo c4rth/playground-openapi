@@ -3,13 +3,13 @@ kind: Component
 metadata:
   name: teama-service-ecommerce-v2-gtu
   description: service-ecommerce:20241206.2
-  service-name: service-ecommerce
-  service-version: '2'
-  image-version: 'gtu2-20241206.2'
-  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce
+    service.depo.be/name: service-ecommerce
+    service.depo.be/version: '2'
+    service.depo.be/platform: 'onprem'
+    service.depo.be/image: 'gtu2-20241206.2'
 spec:
   type: service
   lifecycle: GTU

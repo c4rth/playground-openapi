@@ -3,13 +3,12 @@ kind: Component
 metadata:
   name: teamb-service-dummy-v1-uat
   description: service-dummy:20250311.1
-  service-name: service-dummy
-  service-version: '1'
-  service-platform: 'onprem,cloud'
-  image-version: '20250311.1'
-  devx-version: 'v4.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
+    service.depo.be/name: service-dummy
+    service.depo.be/version: '1'
+    service.depo.be/platform: 'onprem,cloud'
+    service.depo.be/image: '20250311.1'
 spec:
   type: service
   lifecycle: UAT

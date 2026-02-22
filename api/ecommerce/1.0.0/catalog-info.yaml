@@ -6,9 +6,10 @@ metadata:
   tags:
     - store
     - rest
-  api-name: ecommerce
-  api-version: 1.0.0
-  api-project: teama
+  annotations:
+    api.depo.be/name: ecommerce
+    api.depo.be/version: 1.0.0
+    api.depo.be/project: teama
 spec:
   type: openapi
   lifecycle: release

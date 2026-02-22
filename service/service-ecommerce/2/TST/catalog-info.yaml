@@ -3,13 +3,12 @@ kind: Component
 metadata:
   name: teama-service-ecommerce-v2-tst
   description: service-ecommerce:20250120.2
-  service-name: service-ecommerce
-  service-version: '2'
-  image-version: 'tst2-20250120.2'
-  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-ecommerce
+    service.depo.be/name: service-ecommerce
+    service.depo.be/version: '2'
+    service.depo.be/image: 'tst2-20250120.2'
 spec:
   type: service
   lifecycle: TST

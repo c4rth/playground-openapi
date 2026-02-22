@@ -3,9 +3,10 @@ kind: API
 metadata:
   name: teamb-api-petstore-v1.0.21
   description: Petstore API
-  api-name: api-petstore
-  api-version: 1.0.21
-  api-project: teamb
+  annotations:
+    api.depo.be/name: api-petstore
+    api.depo.be/version: 1.0.21
+    api.depo.be/project: teamb
 spec:
   type: openapi
   lifecycle: release

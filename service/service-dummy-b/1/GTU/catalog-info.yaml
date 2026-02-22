@@ -3,13 +3,12 @@ kind: Component
 metadata:
   name: teama-service-dummy-v1-gtu
   description: service-dummy:20250311.1
-  service-name: service-dummy
-  service-version: '1'
-  service-platform: 'onprem,cloud'
-  image-version: '20250311.1'
-  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
+    service.depo.be/service-name: service-dummy
+    service.depo.be/service-version: '1'
+    service.depo.be/service-platform: 'onprem,cloud'
+    service.depo.be/image: '20250311.1'
 spec:
   type: service
   lifecycle: GTU

@@ -3,9 +3,10 @@ kind: API
 metadata:
   name: teama-api-petstore-v1.0.20
   description: Petstore API
-  api-name: api-petstore
-  api-version: 1.0.20
-  api-project: system-a
+  annotations:
+    api.depo.be/name: api-petstore
+    api.depo.be/version: 1.0.20
+    api.depo.be/project: system-a
 spec:
   type: openapi
   lifecycle: release

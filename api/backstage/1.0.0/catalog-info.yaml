@@ -3,9 +3,10 @@ kind: API
 metadata:
   name: teama-api-backstage-v1.0.0
   description: Backstage API
-  api-name: api-backstage
-  api-version: 1.0.0
-  api-project: teama
+  annotations:
+    api.depo.be/name: api-backstage
+    api.depo.be/version: 1.0.0
+    api.depo.be/project: teama
 spec:
   type: openapi
   lifecycle: release

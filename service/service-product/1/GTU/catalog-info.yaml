@@ -3,13 +3,13 @@ kind: Component
 metadata:
   name: teama-service-product-v1-gtu
   description: service-product:20241206.2
-  service-name: service-product
-  service-version: '1'
-  image-version: 'gtu1-20241206.2'
-  devx-version: 'v5.5.0'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
     sonarqube.org/project-key: YOUR_INSTANCE_NAME/service-product
+    service.depo.be/name: service-product
+    service.depo.be/version: '1'
+    service.depo.be/platform: 'cloud'
+    service.depo.be/image: 'gtu1-20241206.2'
 spec:
   type: service
   lifecycle: GTU

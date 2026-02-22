@@ -3,10 +3,10 @@ kind: Component
 metadata:
   name: pipeline-v2
   description: pipeline version 2
-  library-name: pipeline
-  library-version: '2'
   annotations:
     dev.azure.com/project-repo: java-playground/java-playground
+    library.depo.be/name: pipeline
+    library.depo.be/version: '2'
 spec:
   type: library
   lifecycle: production

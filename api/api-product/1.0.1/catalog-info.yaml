@@ -6,9 +6,10 @@ metadata:
   tags:
     - store
     - rest
-  api-name: api-product
-  api-version: 1.0.1-SNAPSHOT
-  api-project: teamb
+  annotations:
+    api.depo.be/name: api-product
+    api.depo.be/version: 1.0.1-SNAPSHOT
+    api.depo.be/project: teamb
 spec:
   type: openapi
   lifecycle: snapshot
