@@ -5,6 +5,13 @@ metadata:
   description: A collection of some services
 spec:
   targets:
+    - ./istio-system/1/TST/catalog-info.yaml
+    - ./service-dummy/1/TST/catalog-info.yaml
+    - ./service-dummy/1/GTU/catalog-info.yaml
+    - ./service-dummy/1/UAT/catalog-info.yaml
+    - ./service-dummy/1/PRD/catalog-info.yaml
+    - ./service-dummy-b/1/TST/catalog-info.yaml
+    - ./service-dummy-b/1/GTU/catalog-info.yaml
     - ./service-ecommerce/1/TST/catalog-info.yaml
     - ./service-ecommerce/1/GTU/catalog-info.yaml
     - ./service-ecommerce/1/UAT/catalog-info.yaml
@@ -15,8 +22,3 @@ spec:
     - ./service-product/2/TST/catalog-info.yaml
     - ./service-product/2/GTU/catalog-info.yaml
     - ./service-product/2/UAT/catalog-info.yaml
-    - ./service-dummy/1/TST/catalog-info.yaml
-    - ./service-dummy/1/GTU/catalog-info.yaml
-    - ./service-dummy-b/1/TST/catalog-info.yaml
-    - ./service-dummy-b/1/GTU/catalog-info.yaml
-    - ./istio-system/1/TST/catalog-info.yaml
