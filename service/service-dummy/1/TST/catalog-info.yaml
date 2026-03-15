@@ -23,3 +23,4 @@ spec:
   dependsOn:
   - component:lib-core-v2.0.0
   - component:pipeline-v3
+  - component:unknown-v1.2.3
